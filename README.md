@@ -1,0 +1,1 @@
+# Probablistyka_w_Zastosowaniach_technicznych
