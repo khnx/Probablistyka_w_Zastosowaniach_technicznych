@@ -1,0 +1,10 @@
+Kod:
+tabela1_subset <- subset(tabela1, tabela1["dochod"] > 3000, select = c("imie", "data urodzenia", "zawod", "liczba przyjaciol", "dochod", "osobowosc"));
+tabela1_subset
+Wynik:
+  imie data urodzenia zawod liczba przyjaciol dochod osobowosc
+4    d              4     d                 4   3204         d
+6    f              6     f                 6   3399         f
+7    g              7     g                 7   3121         g
+8    h              8     h                 8   3346         h
+9    i              9     i                 9   3149         i

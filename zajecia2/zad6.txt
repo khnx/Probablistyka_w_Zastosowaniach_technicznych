@@ -1,0 +1,63 @@
+Kod:
+library(reshape);
+tabela1_melted = melt(tabela1, id = c("imie", "zawod"), measured = c("data urodzenia", "liczba przyjaciol", "dochod", "osobowosc"));
+tabela1_melted
+Wynik:
+   imie zawod          variable value
+1     a     a    data urodzenia     1
+2     b     b    data urodzenia     2
+3     c     c    data urodzenia     3
+4     d     d    data urodzenia     4
+5     e     e    data urodzenia     5
+6     f     f    data urodzenia     6
+7     g     g    data urodzenia     7
+8     h     h    data urodzenia     8
+9     i     i    data urodzenia     9
+10    j     j    data urodzenia    10
+11    a     a liczba przyjaciol     1
+12    b     b liczba przyjaciol     2
+13    c     c liczba przyjaciol     3
+14    d     d liczba przyjaciol     4
+15    e     e liczba przyjaciol     5
+16    f     f liczba przyjaciol     6
+17    g     g liczba przyjaciol     7
+18    h     h liczba przyjaciol     8
+19    i     i liczba przyjaciol     9
+20    j     j liczba przyjaciol    10
+21    a     a            dochod  2833
+22    b     b            dochod  2386
+23    c     c            dochod  2649
+24    d     d            dochod  3204
+25    e     e            dochod  2032
+26    f     f            dochod  3399
+27    g     g            dochod  3121
+28    h     h            dochod  3346
+29    i     i            dochod  3149
+30    j     j            dochod  2709
+31    a     a         osobowosc     a
+32    b     b         osobowosc     b
+33    c     c         osobowosc     c
+34    d     d         osobowosc     d
+35    e     e         osobowosc     e
+36    f     f         osobowosc     f
+37    g     g         osobowosc     g
+38    h     h         osobowosc     h
+39    i     i         osobowosc     i
+40    j     j         osobowosc     j
+
+
+Kod:
+tabela1_casted = cast(tabela1_melted, imie + zawod ~variable, value="value");
+tabela1_casted
+Wynik:
+   imie zawod data urodzenia liczba przyjaciol dochod osobowosc
+1     a     a              1                 1   2833         a
+2     b     b              2                 2   2386         b
+3     c     c              3                 3   2649         c
+4     d     d              4                 4   3204         d
+5     e     e              5                 5   2032         e
+6     f     f              6                 6   3399         f
+7     g     g              7                 7   3121         g
+8     h     h              8                 8   3346         h
+9     i     i              9                 9   3149         i
+10    j     j             10                10   2709         j

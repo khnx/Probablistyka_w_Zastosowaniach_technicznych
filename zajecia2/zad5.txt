@@ -1,0 +1,51 @@
+Kod:
+tabela1_stacked = stack(tabela1, select = c("zawod", "liczba przyjaciol", "dochod"));
+tabela1_stacked
+Wynik:
+   values               ind
+1       a             zawod
+2       b             zawod
+3       c             zawod
+4       d             zawod
+5       e             zawod
+6       f             zawod
+7       g             zawod
+8       h             zawod
+9       i             zawod
+10      j             zawod
+11      1 liczba przyjaciol
+12      2 liczba przyjaciol
+13      3 liczba przyjaciol
+14      4 liczba przyjaciol
+15      5 liczba przyjaciol
+16      6 liczba przyjaciol
+17      7 liczba przyjaciol
+18      8 liczba przyjaciol
+19      9 liczba przyjaciol
+20     10 liczba przyjaciol
+21   2833            dochod
+22   2386            dochod
+23   2649            dochod
+24   3204            dochod
+25   2032            dochod
+26   3399            dochod
+27   3121            dochod
+28   3346            dochod
+29   3149            dochod
+30   2709            dochod
+
+Kod:
+tabela1_unstacked = unstack(tabela1_stacked);
+tabela1_unstacked
+Wynik:
+   zawod liczba.przyjaciol dochod
+1      a                 1   2833
+2      b                 2   2386
+3      c                 3   2649
+4      d                 4   3204
+5      e                 5   2032
+6      f                 6   3399
+7      g                 7   3121
+8      h                 8   3346
+9      i                 9   3149
+10     j                10   2709

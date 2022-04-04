@@ -1,0 +1,15 @@
+Kod:
+tabela1_matrix = as.matrix(tabela1);
+tabela1_matrix
+Wynik:
+      imie data urodzenia zawod liczba przyjaciol dochod osobowosc
+ [1,] "a"  " 1"           "a"   " 1"              "2833" "a"      
+ [2,] "b"  " 2"           "b"   " 2"              "2386" "b"      
+ [3,] "c"  " 3"           "c"   " 3"              "2649" "c"      
+ [4,] "d"  " 4"           "d"   " 4"              "3204" "d"      
+ [5,] "e"  " 5"           "e"   " 5"              "2032" "e"      
+ [6,] "f"  " 6"           "f"   " 6"              "3399" "f"      
+ [7,] "g"  " 7"           "g"   " 7"              "3121" "g"      
+ [8,] "h"  " 8"           "h"   " 8"              "3346" "h"      
+ [9,] "i"  " 9"           "i"   " 9"              "3149" "i"      
+[10,] "j"  "10"           "j"   "10"              "2709" "j"
