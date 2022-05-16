@@ -1,7 +1,3 @@
-# Wejscie do folderu z danymi.
-setwd("C:/Users/radek/Downloads/prob/");
-# Zaladowanie potrzebnych bibliotek.
-library(ggplot2);
 # Zaladowanie tabeli.
 facebookData <- read.delim("FacebookNarcissism.dat", header = T);
 # Stworzenie grafu z odpowiednimi osiami X, Y.
@@ -23,6 +19,11 @@ festivalHistogram <- ggplot(festivalData, aes(day1)) + theme(legend.position = "
 # Wyswietl histogram z dana szerokoscia oraz opisami.
 festivalHistogram + geom_histogram(binwidth = 0.4) + labs(x = "Hygiene Day 1 of the festival", y = "Frequency");
 
+# Stworz graf z osiami gender (X) i day1 (Y)
+festivalBoxplot <- ggplot(festivalData, aes(gender, day1));
+# Wyswietl jako wykres pudelkowy z zadanymi opisami osi
+festivalBoxplot + geom_boxplot() + labs(x = "Gender", y = "Hygiene(Day 1 of the festival)");
+
 # Utworz graf.
 density <- ggplot(festivalData, aes(day1));
 # Wyswietl dane w postaci funkcji gestosci.
@@ -36,3 +37,7 @@ bar <- ggplot(chickFlick, aes(film, arousal));
 bar + stat_summary(fun = "mean", geom = "bar", fill = "White", color = "Black") + labs(x = "Film", y = "Mean Arousal");
 # Funkcja stat_summary() z argumentem fun.data = "mean_cl_normal" nie dziala.
 
+# Stworz wykres slupkowy dla takich kategorii.
+bar <- ggplot(chickFlick, aes(film, arousal, fill = gender));
+# Wyswietl wykres z zadanymi parametrami.
+bar + stat_summary(fun = "mean", geom = "bar", position = "dodge") + stat_summary(fun = "mean", geom = "errorbar", position = position_dodge(width = 0.9), width = 0.2) + labs(x = "Film", y = "Mean Arousal", fill = "Gender");
